@@ -38,8 +38,7 @@ export class KanbanBoard implements OnInit {
     return name.split(' ').join('-');
   }
 
-  // this function checks if the arrow icon should appear to be disabled, this will 
-  // happen for "back" arrow on first stage and for "forward" arrow on the last stage
+  // this function checks if the arrow icon should appear to be disabled based on the stage and arrow side (back/forward)
   arrowIsDisabled = (stage, side) => {
     const disabledIn = {
       back: stage === 0,
